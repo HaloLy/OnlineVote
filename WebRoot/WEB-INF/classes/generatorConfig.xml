@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="F:\java\mybatis\WebRoot\WEB-INF\lib\mysql-connector-java-5.1.12-bin.jar" />
+	<context id="context1">
+		<commentGenerator>
+			<!-- 是否取消注释 -->
+			<property name="suppressAllComments" value="true" />
+			<!-- 是否生成注释代时间戳 -->
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql:///vote?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root" password="sa" />
+			
+		<!-- pojo -->
+		<javaModelGenerator targetPackage="cn.zcw.vote.entity"
+			targetProject="OnlineVote/src" >
+			<!-- 去除字段前后空格 -->
+			<property name="trimStrings" value="false" />	
+		</javaModelGenerator>
+		
+		<!-- mapper.xml -->
+		<sqlMapGenerator targetPackage="cn.zcw.vote.dao"
+			targetProject="OnlineVote/src" />
+			
+		<!-- mapper.java -->
+		<javaClientGenerator targetPackage="cn.zcw.vote.dao"
+			targetProject="OnlineVote/src" type="XMLMAPPER" />
+			
+		<table tableName="account" domainObjectName="Account"/>
+			
+		<table tableName="tb_user" domainObjectName="User"/>
+		<table tableName="tb_project" domainObjectName="Project"/>
+		<table tableName="tb_up" domainObjectName="UP"/>
+	</context>
+</generatorConfiguration>
+

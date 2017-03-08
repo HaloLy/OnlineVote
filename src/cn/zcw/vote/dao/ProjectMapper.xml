@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.zcw.vote.dao.ProjectMapper" >
+  <resultMap id="BaseResultMap" type="cn.zcw.vote.entity.Project" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="item" property="item" jdbcType="VARCHAR" />
+    <result column="choices" property="choices" jdbcType="VARCHAR" />
+    <result column="datestart" property="datestart" jdbcType="DATE" />
+    <result column="dateend" property="dateend" jdbcType="DATE" />
+    <result column="total" property="total" jdbcType="INTEGER" />
+  </resultMap>
+  
+  
+</mapper>
